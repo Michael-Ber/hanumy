@@ -1,0 +1,109 @@
+@import '../var/variables';
+
+.header {
+    padding: 30px 0;
+
+    @media(max-width: $breakpoint-1199) {
+        padding: 30px 10px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media(max-width: $breakpoint-767) {
+            display: none;
+        }
+    }
+
+
+    &__nav {
+        @media(max-width: $breakpoint-991) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        margin: 0 20px;
+    }
+
+    .lang-header {
+
+        &__select {
+            position: relative;
+            background-color: $white-light;
+            padding: 8px 12px;
+            border-radius: 12px;
+            appearance: none;
+            border: none;
+
+            &::after {
+                content: url('./assets/icons/select-arrow.png');
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            option {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .nav-header {
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &__link {
+            transition: .3s all ease;
+            font-weight: 700;
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+
+    .burger-header {
+        &__btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+
+            @media(max-width: $breakpoint-991) {
+                display: flex;
+            }
+
+            span {
+                width: 25px;
+                height: 2px;
+                background-color: $black;
+            }
+        }
+
+        &__menu {
+            display: none;
+        }
+    }
+}
